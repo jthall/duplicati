@@ -4,8 +4,9 @@ namespace Duplicati.Library.Backend.Strings {
     {
         public static string DisplayName { get { return LC.L(@"Jottacloud"); } }
         public static string Description { get { return LC.L(@"This backend can read and write data to Jottacloud using it's REST protocol. Allowed format is ""jottacloud://folder/subfolder""."); } }
-        public static string NoUsernameError { get { return LC.L(@"No username given"); } }
-        public static string NoPasswordError { get { return LC.L(@"No password given"); } }
+        public static string AuthidShort { get { return LC.L(@"The authorization code"); } }
+        public static string AuthidLong(string url) { return LC.L(@"The authorization token retrieved from {0}", url); }
+        public static string NoUsernameError { get { return LC.L(@"No username found"); } }
         public static string NoPathError { get { return LC.L(@"No path given, cannot upload files to the root folder"); } }
         public static string IllegalMountPoint { get { return LC.L(@"Illegal mount point given."); } }
         public static string FileUploadError { get { return LC.L(@"Failed to upload file"); } }
