@@ -32,7 +32,8 @@ namespace Duplicati.Library.Backend
             var userinfo = GetJSONData<UserInfo>(USERINFO_URL);
             if (userinfo != null && !string.IsNullOrEmpty(userinfo.Username))
                 m_username = userinfo.Username;
-            throw new UserInformationException(Strings.Jottacloud.NoUsernameError, "JottaNoUsername");
+	                else
+                throw new UserInformationException(Strings.Jottacloud.NoUsernameError, "JottaNoUsername");
         }
 
         public string Username
